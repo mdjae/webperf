@@ -12,7 +12,7 @@
  
 # TODO : ajouter l'attribut -mtime -2
 ## < 100k 
-find . -iname "*.jpg" -size -100k | xargs jpegoptim --strip-all --max=80
+find . -iname "*.jpg" -size -100k | xargs jpegoptim --strip-all --max=60
  
 ## >= 100k and  <200k
 find . -iname "*.jpg" -size +100k -a -size -200k | xargs jpegoptim --strip-all --max=60

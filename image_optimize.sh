@@ -11,7 +11,10 @@
 #################################
  
 # TODO : ajouter l'attribut -mtime -2
-
+# Sinon une même image pourrait être optimiser plusieurs fois
+# entrant une perte de qualité 
+#
+#
 # losselessly optimization
 find . -iname "*.jpg" | xargs jpegoptim --strip-all 
 

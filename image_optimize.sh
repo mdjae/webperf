@@ -22,10 +22,10 @@ find . -iname "*.jpg" -size -100k | xargs jpegoptim --strip-all --max=60
 find . -iname "*.jpg" -size +100k -a -size -200k | xargs jpegoptim --strip-all --max=60
  
 ## > 200k and  <= 500k
-find . -iname "*.jpg" -size +200k -a -size -500k | xargs jpegoptim --strip-all --max=30
+find . -iname "*.jpg" -size +200k -a -size -500k | xargs jpegoptim --strip-all --max=50
  
 ## > 500k
-find . -iname "*.jpg" -size +500k  | xargs jpegoptim --strip-all --max=20
+find . -iname "*.jpg" -size +500k  | xargs jpegoptim --strip-all --max=50
 
 
 # mogrify -resize "500x500>" *.jpg

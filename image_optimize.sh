@@ -11,6 +11,10 @@
 #################################
  
 # TODO : ajouter l'attribut -mtime -2
+
+# losselessly optimization
+find . -iname "*.jpg" | xargs jpegoptim --strip-all 
+
 ## < 100k 
 find . -iname "*.jpg" -size -100k | xargs jpegoptim --strip-all --max=60
  

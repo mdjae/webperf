@@ -1,7 +1,7 @@
 #!/bin/bash
 ################################
 # Pre-requis :
-# apt-install jpegoptim optipng imagemagick
+# apt-get install jpegoptim optipng imagemagick
 #
 # TODO / Update 2013-12-04: As of jpegoptim version v1.3.0 a new option ‘–all-progressive’ 
 # is available, which is recommended to use

@@ -37,3 +37,18 @@ find . -iname "*.jpg" -size +500k  | xargs jpegoptim --strip-all --max=50
 
 # TODO : optimisation des PNG
 # find /var/www/ -mtime -2 -iname '*.png' -print0 | xargs -0 optipng -o7 -log /root/optipng.log -preserve
+
+## < 100k 
+find . -iname '*.png' -print0 | xargs -0 optipng -o7 -preserve
+## >= 100k and  <200k
+find . -iname '*.png' -print0 | xargs -0 optipng -o7 -preserve
+## > 200k and  <= 500k
+find . -iname '*.png' -print0 | xargs -0 optipng -o7 -preserve
+## > 500k
+find . -iname '*.png' -print0 | xargs -0 optipng -o7 -preserve
+
+
+
+
+
+

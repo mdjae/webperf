@@ -1,7 +1,7 @@
 #!/bin/bash
 ################################
 # Pre-requis :
-# apt-install jpegoptim optipng
+# apt-install jpegoptim optipng imagemagick
 #
 # Update 2013-12-04: As of jpegoptim version v1.3.0 a new option ‘–all-progressive’ 
 # is available, which is recommended to use
@@ -37,6 +37,7 @@ find . -iname "*.jpg" -size +500k  | xargs jpegoptim --strip-all --max=50
 # mogrify -resize "500x500>" *.jpg
 # appartenant a GraphicsMagic
 #
+mogrify -resize 800x600 *.jpg
 
 # TODO : optimisation des PNG
 # find /var/www/ -mtime -2 -iname '*.png' -print0 | xargs -0 optipng -o7 -log /root/optipng.log -preserve

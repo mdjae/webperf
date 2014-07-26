@@ -16,7 +16,32 @@
 #
 #
 
+ROOT_PATH=
+theme_path=
 cd $ROOT_PATH
+
+
+# Resize des fichiers
+# 
+## resize generale
+mogrify -resize 800x600 *.jpg
+
+
+#### Thumbnail
+
+
+
+## media/content/
+## media/images
+
+## media/catalog/category   120x120
+## media/catalog/product
+## media/catalog/product/cache/1/image/   300x300
+## media/catalog/product/cache/1/small_image/   120x120
+## media/catalog/product/cache/1/thumbnail/      60x60
+
+## skin/frontend/xxx/xxx/images/
+
 
 # losselessly optimization
 find . -iname "*.jpg" | xargs jpegoptim --strip-all 
@@ -34,34 +59,8 @@ find . -iname "*.jpg" -size +200k -a -size -500k | xargs jpegoptim --strip-all -
 find . -iname "*.jpg" -size +500k  | xargs jpegoptim --strip-all --max=50
 
 
-# Resize des fichiers
-# 
-## resize generale
-mogrify -resize 800x600 *.jpg
-
-
-#### Thumbnail
-
-## media/catalog/category   120x120
-
-## media/catalog/product
-
-## media/images
-
-## media/catalog/product/cache/1/small_image/   120x120
-
-## media/catalog/product/cache/1/thumbnail/      60x60
-
-## media/content/
-
-## skin/frontend/xxx/xxx/images/
-
-
-
-
-
 # TODO : optimisation des PNG
-# find /var/www/ -mtime -2 -iname '*.png' -print0 | xargs -0 optipng -o7 -log /root/optipng.log -preserve
+
 
 ## < 100k 
 find . -iname '*.png' -size -100k | xargs optipng -o5 -preserve -strip

@@ -24,7 +24,7 @@ cd $ROOT_PATH
 # Resize des fichiers
 # 
 ## resize generale
-mogrify -resize 800x600 *.jpg
+find . -iname "*.jpg" | xargs mogrify -resize 800x600 
 
 
 #### Thumbnail

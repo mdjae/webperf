@@ -7,7 +7,7 @@
 # is available, which is recommended to use
 #
 # # m h dom mon dow command
-# 0 1 * * * /root/optimize-images.sh
+# 0 1 * * * /root/image_optimize.sh
 #################################
  
 # TODO : ajouter l'attribut -mtime -2

@@ -15,6 +15,9 @@
 # entrant une perte de qualité 
 #
 #
+
+cd $ROOT_PATH
+
 # losselessly optimization
 find . -iname "*.jpg" | xargs jpegoptim --strip-all 
 
@@ -39,13 +42,13 @@ find . -iname "*.jpg" -size +500k  | xargs jpegoptim --strip-all --max=50
 # find /var/www/ -mtime -2 -iname '*.png' -print0 | xargs -0 optipng -o7 -log /root/optipng.log -preserve
 
 ## < 100k 
-find . -iname '*.png' -print0 | xargs -0 optipng -o7 -preserve
+find . -iname '*.png' -size -100k | xargs optipng -o5 -preserve -strip
 ## >= 100k and  <200k
-find . -iname '*.png' -print0 | xargs -0 optipng -o7 -preserve
+find . -iname '*.png' -size +100k -a -size -200k | xargs optipng -o5 -preserve -strip
 ## > 200k and  <= 500k
-find . -iname '*.png' -print0 | xargs -0 optipng -o7 -preserve
+find . -iname '*.png' -size +200k -a -size -500k | xargs optipng -o7 -preserve -strip
 ## > 500k
-find . -iname '*.png' -print0 | xargs -0 optipng -o7 -preserve
+find . -iname '*.png' -size +500k | xargs optipng -o7 -preserve -strip
 
 
 

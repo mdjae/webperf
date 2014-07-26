@@ -34,10 +34,31 @@ find . -iname "*.jpg" -size +200k -a -size -500k | xargs jpegoptim --strip-all -
 find . -iname "*.jpg" -size +500k  | xargs jpegoptim --strip-all --max=50
 
 
-# mogrify -resize "500x500>" *.jpg
-# appartenant a GraphicsMagic
-#
+# Resize des fichiers
+# 
+## resize generale
 mogrify -resize 800x600 *.jpg
+
+
+#### Thumbnail
+
+## media/catalog/category   120x120
+
+## media/catalog/product
+
+## media/images
+
+## media/catalog/product/cache/1/small_image/   120x120
+
+## media/catalog/product/cache/1/thumbnail/      60x60
+
+## media/content/
+
+## skin/frontend/xxx/xxx/images/
+
+
+
+
 
 # TODO : optimisation des PNG
 # find /var/www/ -mtime -2 -iname '*.png' -print0 | xargs -0 optipng -o7 -log /root/optipng.log -preserve

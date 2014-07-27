@@ -40,7 +40,8 @@ find . -iname "*.jpg" | xargs mogrify -resize 800x600
 ## media/catalog/product/cache/1/small_image/   120x120
 ## media/catalog/product/cache/1/thumbnail/      60x60
 
-## skin/frontend/xxx/xxx/images/
+## skin/frontend/societe-name/theme-name/images/
+## skin/frontend/societe-name/theme-name/css/images/
 
 
 # losselessly optimization

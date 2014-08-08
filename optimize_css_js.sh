@@ -1,3 +1,13 @@
+#!/bin/bash
+################################
+# Pre-requis :
+# apt-get java 
+# yuicompressor-2.4.7.jar
+#
+#
+# # m h dom mon dow command
+# 0 1 * * * /root/optimize_css_js.sh
+#################################
 echo "==============================================="
 echo " Build Script v0.1 - YUICompressor"
 echo "==============================================="

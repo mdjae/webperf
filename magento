@@ -1,9 +1,9 @@
 # Magento Performance With MySQL Query Cache
+In a product database containing over 80,000 items, 
+our test results show a non-cached query returning in just over 11 seconds.
+This same query performed a second time results in using the cached query 
+and produces the same result set in just over 1 second.
 
-
-In a product database containing over 80,000 items, our test results show a non-cached query returning in just over 11 seconds.
-
-This same query performed a second time results in using the cached query and produces the same result set in just over 1 second.
 
 mysql> SHOW VARIABLES LIKE 'have_query_cache';
 +------------------+----------+
@@ -12,7 +12,10 @@ mysql> SHOW VARIABLES LIKE 'have_query_cache';
 | have_query_cache | YES      |
 +------------------+----------+
 
-If you are using a standard MySQL binary this value is always YES, even if query caching is disabled so it's not time for great joy, yet.
+
+
+If you are using a standard MySQL binary this value is always YES, 
+even if query caching is disabled so it's not time for great joy, yet.
 
 mysql> SHOW VARIABLES LIKE 'query_cache_size';
 +------------------+----------+
@@ -22,7 +25,9 @@ mysql> SHOW VARIABLES LIKE 'query_cache_size';
 +------------------+----------+
 1 row in set (0.00 sec)
 
-If you have root access, making a change to this value is trivial. Simply add the following line to your my.conf file in the [mysqld] section and restart your MySQL server:
+If you have root access, making a change to this value is trivial. 
+Simply add the following line to your my.conf file in the [mysqld] 
+section and restart your MySQL server:
 
 query_cache_size=32M
 
